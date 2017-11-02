@@ -1,0 +1,116 @@
+ <!DOCTYPE html>
+<html> 
+
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<head>
+
+<title> Sydney's Water Pods </title>
+
+
+
+
+<ul2>
+CODE1230:URBAN MODELLING
+</ul2>
+
+<div class="bgimg1">
+<img src="context.png" style='width:100%;'>
+  <div class="caption">
+    <span class="border">Sumiyoshi Sanjin</span>
+  </div>
+</div>
+
+  <div class="caption2-1">
+     Problem
+  </div>
+
+<div class="caption2">
+
+Current issues in Sydney's age distrition are housing affordability and accessibility which are forcing young adults to invest into expensive new housing in suburbs which are more than 40km away from the CBD. Resulting in hour long commutes to work or missed opportunities to work in a certain area, as well as a population distribution thats depicted by housing prices. As can be seen in the image below, large numbers of age 25 to 40 live in the suburbs farther away from many of the jobs in the CBD and North Sydney. 
+
+</div>
+
+<div class="img2">
+<img src="25-40.png" style="width:50%">
+</div>
+
+
+<div class="caption3-1">
+ Solution
+</div>
+
+
+<meta charset='utf-8' />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
+    <script src ='./data.js'></script>
+    <link href='./mapboxgl-map.css' rel='stylesheet'/>
+  	<style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; height:95%;top:220%; width:50%; }
+    </style>
+<div id='map'>
+</div>
+
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoidG9ueWh1YW5nOTUiLCJhIjoiY2o2bHE5b3Q3MWl2aDJxbXloZ2l4Mms1ZSJ9.yQ1R1aw_sk3wRDB_i41bxQ';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/tonyhuang95/cj6vq34xz8fjo2ssdir8bwmfo',
+    center: [151.1, -33.865],
+    zoom: 10.8,
+    pitch: 40,
+    bearing: 0
+});
+
+map.on('load', function() {
+
+    map.addLayer({
+        'id': 'room-extrusion',
+        'type': 'fill-extrusion',
+        'source': {
+            // Geojson Data source used in vector tiles, documented at
+            // https://gist.github.com/ryanbaumann/a7d970386ce59d11c16278b90dde094d
+            'type': 'geojson',
+            'data': data
+        },
+        'paint': {
+            // 'fill-color': '#088',
+            // 'fill-opacity': 0.8
+            // See the Mapbox Style Spec for details on property functions
+            // https://www.mapbox.com/mapbox-gl-style-spec/#types-function
+
+            'fill-extrusion-color': {
+                // Get the fill-extrusion-color from the source 'color' property.
+                'property': '0-19',
+                "stops": [
+                    [-0.25, 'black'],
+                    [0.08, '#CF6766'],
+                    [1, 'red']
+                    ]
+
+            },
+            'fill-extrusion-height': {
+                // Get fill-extrusion-height from the source 'height' property.
+                'property': 'Total_019',
+                "stops": [
+                    [0, 0],
+                    [1, 20000]
+                    ]
+            },
+            'fill-extrusion-base': {
+                // Get fill-extrusion-base from the source 'base_height' property.
+                'property': 'base_height',
+                'type': 'identity'
+            },
+            // Make extrusions slightly opaque for see through indoor walls.
+            'fill-extrusion-opacity': 0.8
+        }
+    });
+});
+</script>
+<div class="caption4">
+
+
+</html>
