@@ -16,7 +16,7 @@ body,html {
 
 .map1 {
   position:absolute;
-  top:220%;
+  top:205%;
   width:50%;
   left:0;
   height:95%;
@@ -98,28 +98,15 @@ h2 {
 .img2 {
   position: absolute;
   left:50%;
-  top: 150%;
+  top: 135%;
   width:100%;
 }
 
-.caption3 {
-  position: absolute;
-  left:5%;
-  top: 215%;
-  width: 45%;
-  text-align: center;
-  color: #031424;
-  z-index: 1;
-  font-size:16px;
-  font-family: "Lato", sans-serif;
-  line-height: 25px;
-
-}
 
 .caption3-1 {
   position: absolute;
   left: 0;
-  top: 215%;
+  top: 200%;
   width: 100%;
   text-align: center;
   color: #031424;
@@ -138,7 +125,7 @@ h2 {
 .caption4 {
   position: absolute;
   left:55%;
-  top: 230%;
+  top: 210%;
   width: 40%;
   text-align: center;
   color: #031424;
@@ -151,13 +138,17 @@ h2 {
 .img3 {
   position: absolute;
   left:0%;
-  top:325%;
+  top:310%;
 }
-
+.img4 {
+  position: absolute;
+  left:75%;
+  top:310%;
+}
 .caption4-1 {
   position: absolute;
   left: 0;
-  top: 315%;
+  top: 300%;
   width: 100%;
   text-align: center;
   color: #031424;
@@ -174,7 +165,7 @@ h2 {
 .caption5 {
   position: absolute;
   left:40%;
-  top: 330%;
+  top: 310%;
   width: 30%;
   text-align: center;
   color: #031424;
