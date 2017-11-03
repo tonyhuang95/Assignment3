@@ -39,78 +39,32 @@ Current issues in Sydney's age distrition are housing affordability and accessib
  Solution
 </div>
 
+<div class="map1">
+<iframe src="map.html" height=1000px frameborder="0" scrolling="yes" width=99%></iframe>
+</div>
 
-<meta charset='utf-8' />
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
-    <script src ='./data.js'></script>
-    <link href='./mapboxgl-map.css' rel='stylesheet'/>
-  	<style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; height:95%;top:220%; width:50%; }
-    </style>
-<div id='map'>
+<div class="caption4">
+In order to combat these issues, we have designed a comprehensive water network that will incorporate boat houses that are able to be transported to any area in Greater Sydney at any time. A large waterfront building will be erected at CBDs such as Barangaroo, Parramatta, Homebush, Chatswood and more, effectively connecting these areas via water. This would lead to 
+<img src="http://kyprisnews.com/wp-content/uploads/2016/11/modern-boat-house-in-indonesia-a-modern-floating-house-architects-and-artisans.jpg" style="width:47%;float:left;padding:1%;">
+<img src="https://images.adsttc.com/media/images/55db/3f05/e58e/cec9/9300/0005/large_jpg/NIGHT_VIEW.jpg?1440431866" style="width:49%;float:right;padding:1%;">
+<img src="https://architecturetokyo.files.wordpress.com/2016/09/dsc_3857.jpg?w=876&h=876&crop=1" style="width:47%;float:left;padding:1%;padding-top:1.4%">
 </div>
 
 
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoidG9ueWh1YW5nOTUiLCJhIjoiY2o2bHE5b3Q3MWl2aDJxbXloZ2l4Mms1ZSJ9.yQ1R1aw_sk3wRDB_i41bxQ';
-var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/tonyhuang95/cj6vq34xz8fjo2ssdir8bwmfo',
-    center: [151.1, -33.865],
-    zoom: 10.8,
-    pitch: 40,
-    bearing: 0
-});
 
-map.on('load', function() {
+<div class="caption4-1">
+ The Design
+</div>
 
-    map.addLayer({
-        'id': 'room-extrusion',
-        'type': 'fill-extrusion',
-        'source': {
-            // Geojson Data source used in vector tiles, documented at
-            // https://gist.github.com/ryanbaumann/a7d970386ce59d11c16278b90dde094d
-            'type': 'geojson',
-            'data': data
-        },
-        'paint': {
-            // 'fill-color': '#088',
-            // 'fill-opacity': 0.8
-            // See the Mapbox Style Spec for details on property functions
-            // https://www.mapbox.com/mapbox-gl-style-spec/#types-function
+<div class="img3">
+<img src="section.png" style="width:40%">
+</div>
 
-            'fill-extrusion-color': {
-                // Get the fill-extrusion-color from the source 'color' property.
-                'property': '0-19',
-                "stops": [
-                    [-0.25, 'black'],
-                    [0.08, '#CF6766'],
-                    [1, 'red']
-                    ]
-
-            },
-            'fill-extrusion-height': {
-                // Get fill-extrusion-height from the source 'height' property.
-                'property': 'Total_019',
-                "stops": [
-                    [0, 0],
-                    [1, 20000]
-                    ]
-            },
-            'fill-extrusion-base': {
-                // Get fill-extrusion-base from the source 'base_height' property.
-                'property': 'base_height',
-                'type': 'identity'
-            },
-            // Make extrusions slightly opaque for see through indoor walls.
-            'fill-extrusion-opacity': 0.8
-        }
-    });
-});
-</script>
-<div class="caption4">
-
+<div class="caption5">
+In order to combat these issues, we have designed a comprehensive water network that will incorporate boat houses that are able to be transported to any area in Greater Sydney at any time. A large waterfront building will be erected at CBDs such as Barangaroo, Parramatta, Homebush, Chatswood and more, effectively connecting these areas via water. This would lead to 
+<img src="http://kyprisnews.com/wp-content/uploads/2016/11/modern-boat-house-in-indonesia-a-modern-floating-house-architects-and-artisans.jpg" style="width:47%;float:left;padding:1%;">
+<img src="https://images.adsttc.com/media/images/55db/3f05/e58e/cec9/9300/0005/large_jpg/NIGHT_VIEW.jpg?1440431866" style="width:49%;float:right;padding:1%;">
+<img src="https://architecturetokyo.files.wordpress.com/2016/09/dsc_3857.jpg?w=876&h=876&crop=1" style="width:47%;float:left;padding:1%;padding-top:1.4%">
+</div>
 
 </html>
